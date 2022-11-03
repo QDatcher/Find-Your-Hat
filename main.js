@@ -15,10 +15,13 @@ let Field = class {
     }
 
     print(){
-        for(let i = 0; i < this._field.length; i++){
-            this._field[i].join('')
-        }
-        console.log(this._field.join(''))
+        let printedField = [];
+        this._field.forEach((row) => {
+            printedField.push(row.join(''))
+            
+        });
+        return printedField.join('\n')
+
     }
 }
 
